@@ -1,0 +1,14 @@
+
+U
+java:S1854":Remove this useless assignment to local variable "child2".(ˆã¥ßùÿÿÿÿ
+P
+java:S1854":Remove this useless assignment to local variable "child1".(µÔÖö
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÿ¸±×
+A
+java:S1481"+Remove this unused "child1" local variable.(µÔÖö
+F
+java:S1481"+Remove this unused "child2" local variable.(ˆã¥ßùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ë†«®
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¤¯³…
