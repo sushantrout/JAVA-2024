@@ -1,0 +1,22 @@
+<!-- document.getElementById("test").innerText = document.getElementById("name").value; -->
+
+<input type="text" [(ngModel)]="test">
+
+
+
+<h1 >{{test | uppercase}}</h1>
+<h1 >{{test | lowercase}}</h1>
+<h1 >{{test | titlecase}}</h1>
+
+<!-- ( -> event/Output -->
+<button (click)="showMessage()">Change</button>
+
+<!-- [ -> property/Input -->
+<h1 [innerHTML]="test"></h1>
+<h1 [innerText]="test"></h1>
+
+<!-- {{ -> interpolation -->
+
+<!-- [()] Propert with event / Input with output-->
+
+{{test}}

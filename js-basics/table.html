@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b38600;
+        }
+
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        td {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <script>
+        function add() {
+            let id = document.getElementById("name");
+            let age = document.getElementById("age");
+
+            document.getElementById("nameId").innerText = id.value;
+            document.getElementById("ageId").innerText = age.value;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name">
+        <label for="age">Age:</label>
+        <input type="text" id="age" placeholder="Age">
+        <button onclick="add()">Add</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="nameId"></td>
+                <td id="ageId"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

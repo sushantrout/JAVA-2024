@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script>
+        function printWelcome() {
+            let name = document.getElementById("name").value;
+            document.getElementById("welcome").innerText = "Welcome " + name;
+            document.getElementById("welcome1").innerHTML = "Welcome1 <i>" + name + "</i>";
+            //alert("Hello World " + name);
+
+        }
+    </script>
+</head>
+
+<body style="color: red;">
+    <input type="text" id="name">
+    <button onclick="printWelcome()">Submit</button>
+
+    <p id="welcome">Welcome {NAME} !</p>
+    <p id="welcome1">Welcome {NAME} !</p>
+</body>
+
+</html>

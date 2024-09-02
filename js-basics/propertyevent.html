@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script>
+            function print() {
+                document.getElementById("test").innerText = document.getElementById("name").value;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="name" onkeydown="print()">
+        <h1 id="test"></h1>
+    </body>
+</html>
