@@ -1,0 +1,13 @@
+<!-- <nav>
+  <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/about']">About</a>
+  <a [routerLink]="['/blog']">Blog</a>
+  <a [routerLink]="['/portfolio']">Portefolio</a>
+  <a [routerLink]="['/contact']">Contact</a>
+  <div class="animation start-home"></div>
+</nav>
+<router-outlet></router-outlet> -->
+<input type="text" [(ngModel)]="amount" />
+
+<app-about [money]="amount" (moneySent)="moneyRecipt($event)"></app-about>
+
