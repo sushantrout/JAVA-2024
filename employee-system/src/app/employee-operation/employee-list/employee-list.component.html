@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Department</th>
+    <th>Salary</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let employee of employees; let i = index" >
+    <td>{{employee.id}}</td>
+    <td>{{employee.name | uppercase | mr : employee.gender}}</td>
+    <td [ngClass]="i % 2 == 0 ? 'first' : 'second'">{{employee.email}}</td>
+    <td [ngStyle]="{'color': employee.gender == 'male' ? 'blue' : 'red'}">{{employee.phone}}</td>
+    <td >{{employee.department}}</td>
+    <td>{{employee.salary}}</td>
+    <td>
+      <button (click)="editEmployee(employee)">Edit</button>
+      <button (click)="deleteEmployee(i)">Delete</button>
+    </td>
+  </tr>
+</table>
