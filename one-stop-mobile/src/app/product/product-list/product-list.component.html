@@ -1,0 +1,6 @@
+<div *ngFor="let product of products" class="row">
+  <div class="col-3">
+    <img [src]="product.thumbnail" />
+    {{product.title}}
+  </div>
+</div>
