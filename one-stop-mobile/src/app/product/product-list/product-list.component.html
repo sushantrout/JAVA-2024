@@ -1,6 +1,30 @@
-<div *ngFor="let product of products" class="row">
-  <div class="col-3">
-    <img [src]="product.thumbnail" />
-    {{product.title}}
+<div class="row">
+  <div class="col-10">
+    <input type="text" class="form-control" placeholder="Search products" [(ngModel)]="searchText" (ngModelChange)="staticSearch()">
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="search()">Search</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary" (click)="reset()">Reset</button>
+  </div>
+</div>
+
+<div class="row" style="height: 20px;"></div>
+
+
+<div class="row" style="height: 80vh; overflow:hidden; overflow-y: scroll;">
+  <div class="col-12">
+    <div class="row" *ngIf="!selectedProduct">
+      <div *ngFor="let product of products" class="col-3">
+        <app-product-detail [product]="product" (viewDetailOutput)="viewDetail($event)"></app-product-detail>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="selectedProduct">
+      <div class="col-12">
+        <app-product-view [product]="selectedProduct" (closePageOutput)="closeDetail()"></app-product-view>
+      </div>
+    </div>
   </div>
 </div>

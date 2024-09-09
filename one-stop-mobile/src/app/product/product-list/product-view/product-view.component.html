@@ -1,0 +1,54 @@
+<div class="container my-5 position-relative">
+  <!-- Close Button -->
+  <button class="btn btn-danger position-absolute" style="top: 10px; right: 10px;" (click)="closePage()">
+    Close
+  </button>
+
+  <div class="row">
+    <!-- Product Image -->
+    <div class="col-md-5">
+      <img
+        src="{{ product.thumbnail }}"
+        class="img-fluid"
+        alt="{{ product.title }}"
+      />
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-7">
+      <h2>{{ product.title }}</h2>
+      <p class="text-muted">by {{ product.brand }}</p>
+      <p>{{ product.description }}</p>
+      <h4 class="text-danger">Price: ${{ product.price }}</h4>
+      <p>Discount: {{ product.discountPercentage }}%</p>
+      <p>
+        <span class="badge badge-success">{{ product.category }}</span>
+        <span *ngFor="let tag of product.tags" class="badge badge-secondary">{{
+          tag
+        }}</span>
+      </p>
+      <p>Stock: <span [ngClass]="{'text-danger': product.stock <= 5}">{{ product.stock }}</span></p>
+      <p>Rating: <span class="review-rating">{{ product.rating }}</span> / 5</p>
+      <p>SKU: {{ product.sku }}</p>
+      <p>Dimensions: {{ product.dimensions.width }} x {{ product.dimensions.height }} x {{ product.dimensions.depth }} cm</p>
+      <p>Weight: {{ product.weight }} grams</p>
+      <p>Warranty: {{ product.warrantyInformation }}</p>
+      <p>Shipping: {{ product.shippingInformation }}</p>
+      <p>Availability: {{ product.availabilityStatus }}</p>
+    </div>
+  </div>
+
+  <!-- Product Reviews -->
+  <div class="mt-5">
+    <h3>Reviews</h3>
+    <div
+      *ngFor="let review of product.reviews"
+      class="border p-3 my-2 rounded"
+    >
+      <strong>{{ review.reviewerName }}</strong>
+      <p class="mb-1">Rating: {{ review.rating }} / 5</p>
+      <p>{{ review.comment }}</p>
+      <small class="text-muted">{{ review.date | date: 'MM/dd/yyyy HH:mm:ss' }}</small>
+    </div>
+  </div>
+</div>

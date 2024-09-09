@@ -1,0 +1,22 @@
+<div class="product-container">
+  <div class="row">
+    <div class="col-12 product-image">
+      <img [src]="product.thumbnail" alt="Product Image" height="200px" width="200px"/>
+    </div>
+  </div>
+
+  <!-- what is the difference between property binding and interpolation?
+  property binding is used to bind the value of a property to a variable.
+  property binding can not be used with out tag.
+  interpolation can be used with out tag.
+  -->
+
+  <div class="row product-info">
+    <div class="col-8 product-title" [title]="product.title"> <!-- {{product.title}} -->
+      {{ product.title | ellipses : 12}}
+    </div>
+    <div class="col-4 text-right">
+      <button class="btn btn-primary" (click)="viewDetail()" appHeilight>View</button>
+    </div>
+  </div>
+</div>
