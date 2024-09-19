@@ -19,6 +19,11 @@ export class ProductListComponent implements OnInit {
   searchText : string = '';
 
   constructor(private http: HttpClient) {
+
+    http.get("http://localhost:8080/hello").subscribe((data: any) => {
+      console.log(data);
+    });
+
     /**
      * HttpClient is a service that is used to make HTTP requests.
      */

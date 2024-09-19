@@ -1,0 +1,29 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">My Application</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li>
+          <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active">Contact Us</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/about-us']" routerLinkActive="router-link-active">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet />
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 text-right">
+        <p>&copy; 2024 My Application</p>
+      </div>
+    </div>
+  </div>
+</footer>
