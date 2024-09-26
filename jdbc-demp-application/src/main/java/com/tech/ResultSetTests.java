@@ -1,8 +1,5 @@
 package com.tech;
 
-import com.sun.tools.jconsole.JConsoleContext;
-
-import javax.swing.*;
 import java.sql.*;
 
 public class ResultSetTests {

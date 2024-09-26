@@ -1,0 +1,1 @@
+CREATE TABLE employee(id int, name varchar, zip_code varchar);

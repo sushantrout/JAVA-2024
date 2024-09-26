@@ -1,0 +1,9 @@
+
+c
+java:S2095	"HUse try-with-resources or close this "JdbcRowSet" in a "finally" clause.(”‚´„şÿÿÿÿ
+Q
+java:S6437"6Revoke and change this password, as it is compromised.(ä “Åüÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•’´İ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ğÛ¶úÿÿÿÿ
+j
+java:S1215"TDon't try to be smarter than the JVM, remove this call to run the garbage collector.(Ì°¬“
