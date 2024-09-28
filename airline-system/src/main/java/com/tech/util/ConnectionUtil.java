@@ -7,16 +7,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectionUtil {
-    private static final String URL = "jdbc:postgresql://localhost:5433/airline-sysrtem";
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "admin";
+    private static final String URL = "jdbc:mysql://localhost:3306/airlinesystem";
+    private static final String USERNAME = "root";
+    private static final String PASSWORD = "Priyanshi@2005";
     
 	private static Connection connection = null;
 
 	public static Connection getConnection() throws SQLException {
 		if(connection == null) {
             try {
-                Class.forName("org.postgresql.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
