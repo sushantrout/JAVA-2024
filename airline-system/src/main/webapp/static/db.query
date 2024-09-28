@@ -1,0 +1,4 @@
+CREATE TABLE flight (
+    flight_number VARCHAR(50) NOT NULL,
+    destination VARCHAR(100) NOT NULL
+);

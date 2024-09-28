@@ -13,20 +13,15 @@ public class ConnectionUtil {
     
 	private static Connection connection = null;
 
-	public static Statement getStatement() throws SQLException {
+	public static Connection getConnection() throws SQLException {
 		if(connection == null) {
-			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            try {
+                Class.forName("org.postgresql.Driver");
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 		}
-		
-		Statement statement = connection.createStatement();
-		return statement;
-	}
-	
-	public static PreparedStatement prepareStatement(String sql) throws SQLException {
-		if(connection == null) {
-			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-		}
-		
-		return connection.prepareStatement(sql);
+		return connection;
 	}
 }

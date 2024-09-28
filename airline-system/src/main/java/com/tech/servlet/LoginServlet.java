@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.tech.util.ConnectionUtil;
 
@@ -28,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		
 		try {
-			PreparedStatement userSelectStatement = ConnectionUtil
+			PreparedStatement userSelectStatement = ConnectionUtil.getConnection()
 					.prepareStatement("SELECT *FROM application_user WHERE username=? and password = ?");
 			userSelectStatement.setString(1, username);
 			userSelectStatement.setString(2, password);
@@ -36,9 +37,12 @@ public class LoginServlet extends HttpServlet {
 			ResultSet executeQuery = userSelectStatement.executeQuery();
 
 			if (executeQuery.next()) {
-				resp.sendRedirect("/airline-system/login-success.jsp");
+				HttpSession session = req.getSession();
+				session.setAttribute("username", username);
+				session.setAttribute("login", true);
+				resp.sendRedirect(req.getContextPath() + "/admin.jsp");
 			} else {
-				resp.sendRedirect("/airline-system/login-fail.jsp");
+				resp.sendRedirect(req.getContextPath() + "/index.jsp?login-failed=true");
 			}
 
 		} catch (SQLException e) {
