@@ -208,13 +208,12 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                risus at semper.
+                                Excellent in flight service and very helpful cabin crew.
+                            I would like to praise the cabin crew staff on the above mentioned flight.
                             </p>
                             <div class="profile mt-auto">
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
+                                <img src="assets/img/testimonials/bisnu.enc" class="testimonial-img" alt="">
+                                <h3>Bisnupriya Das</h3>
                                 <h4>Ceo &amp; Founder</h4>
                             </div>
                         </div>
@@ -228,13 +227,15 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.
+                                Service is still good
+                            I have been flying Singapore airlines for work since 2005. 
+                             Their service is still one of the best.
+                                I have tried other airlines and some of them leave you feeling as 
+                               if the cabin crew are the paying customers.
                             </p>
                             <div class="profile mt-auto">
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
+                                <img src="assets/img/testimonials/lulumamu.enc" class="testimonial-img" alt="">
+                                <h3>Sanatana Pradhan</h3>
                                 <h4>Designer</h4>
                             </div>
                         </div>
@@ -248,12 +249,11 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                Strengths: Exceptional in-flight service, spacious seating, and extensive entertainment options. The food quality is consistently good, and the staff is friendly and attentive.
                             </p>
                             <div class="profile mt-auto">
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
+                                <img src="assets/img/testimonials/rahulbhai.enc" class="testimonial-img" alt="">
+                                <h3>Shaswat Pratik Nayak </h3>
                                 <h4>Store Owner</h4>
                             </div>
                         </div>
@@ -267,13 +267,11 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                labore illum veniam.
+                                Strengths: Comfortable seats with excellent legroom and one of the best business class experiences. Qatar Airways has great food and entertainment services.
                             </p>
                             <div class="profile mt-auto">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
+                                <img src="assets/img/testimonials/queen mam.enc" class="testimonial-img" alt="">
+                                <h3>Queen Swain</h3>
                                 <h4>Freelancer</h4>
                             </div>
                         </div>
@@ -287,13 +285,11 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                culpa fore nisi cillum quid.
+                                Strengths: Extensive flight routes across the U.S. and internationally, with competitive ticket prices. In-flight Wi-Fi is generally available, and the AAdvantage program offers great benefits.
                             </p>
                             <div class="profile mt-auto">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
+                                <img src="assets/img/testimonials/skillsir.enc" class="testimonial-img" alt="">
+                                <h3>Sanu Tripathy</h3>
                                 <h4>Entrepreneur</h4>
                             </div>
                         </div>
