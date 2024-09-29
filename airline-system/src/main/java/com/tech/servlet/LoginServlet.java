@@ -16,37 +16,35 @@ import com.tech.util.ConnectionUtil;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doPost(req, resp);
-	}
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        doPost(req, resp);
+    }
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		
-		try {
-			PreparedStatement userSelectStatement = ConnectionUtil.getConnection()
-					.prepareStatement("SELECT *FROM application_user WHERE username=? and password = ?");
-			userSelectStatement.setString(1, username);
-			userSelectStatement.setString(2, password);
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
 
-			ResultSet executeQuery = userSelectStatement.executeQuery();
 
-			if (executeQuery.next()) {
-				HttpSession session = req.getSession();
-				session.setAttribute("username", username);
-				session.setAttribute("login", true);
-				resp.sendRedirect(req.getContextPath() + "/admin.jsp");
-			} else {
-				resp.sendRedirect(req.getContextPath() + "/index.jsp?login-failed=true");
-			}
+        try (PreparedStatement userSelectStatement = ConnectionUtil.getConnection()
+                .prepareStatement("SELECT *FROM application_user WHERE username=? and password = ?")) {
+            userSelectStatement.setString(1, username);
+            userSelectStatement.setString(2, password);
 
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+            if (userSelectStatement.executeQuery().next()) {
+                HttpSession session = req.getSession();
+                session.setAttribute("username", username);
+                session.setAttribute("login", true);
+                resp.sendRedirect(req.getContextPath() + "/admin.jsp");
+            } else {
+                resp.sendRedirect(req.getContextPath() + "/index.jsp?login-failed=true");
+            }
+
+        } catch (SQLException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

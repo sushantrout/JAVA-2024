@@ -14,11 +14,17 @@
             </div>
 
             <!-- Flight Management Form -->
-            <form action="${pageContext.request.contextPath}/manage-flight" method="post" class="d-flex justify-content-center align-items-center">
-                <input type="hidden" name="action" value="add">
-                <input type="text" class="form-control form-control-sm me-2" id="flightNumber" name="flightNumber" placeholder="Flight Number" required>
-                <input type="text" class="form-control form-control-sm me-2" id="destination" name="destination" placeholder="Destination" required>
-                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            <form action="${pageContext.request.contextPath}/manage-flight" method="post" class="form-inline justify-content-center">
+                <input type="hidden" name="action" value="${flight == null ? 'add' : 'update'}">
+                <input type="hidden" name="id" value="${flight == null ? '' : flight.id}">
+
+                <label for="flightNumber" class="form-label">Flight Number:</label>
+                <input type="text" class="form-control form-control-sm me-2" id="flightNumber" value="${flight == null ? '' : flight.flightNumber}" name="flightNumber" placeholder="Flight Number" required>
+
+                <label for="destination" class="form-label">Destination:</label>
+                <input type="text" class="form-control form-control-sm me-2" id="destination" value="${flight == null ? '' : flight.destination}" name="destination" placeholder="Destination" required>
+
+                <button type="submit" class="btn btn-primary btn-sm w-100">${flight == null ? 'Save' : 'Update'}</button>
             </form>
 
             <!-- Flight Table -->
@@ -37,21 +43,56 @@
                                 <td>${flight.flightNumber}</td>
                                 <td>${flight.destination}</td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/flight/edit?id=${flight.flightNumber}" class="btn btn-warning">Edit</a>
-                                    <a href="${pageContext.request.contextPath}/flight/delete?id=${flight.flightNumber}" class="btn btn-danger">Delete</a>
+                                    <a href="${pageContext.request.contextPath}/manage-flight?id=${flight.id}&action=edit" class="btn btn-warning">Edit</a>
+                                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                       onclick="setDeleteFlightId('${flight.id}');">Delete</a>
                                 </td>
                             </tr>
                         </c:forEach>
                     </c:if>
                     <c:if test="${empty flights}">
                         <tr>
-                            <td colspan="4" class="text-center">No flights available.</td>
+                            <td colspan="3" class="text-center">No flights available.</td>
                         </tr>
                     </c:if>
                 </tbody>
             </table>
         </section>
     </main>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this flight?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <jsp:include page="include/footer.jsp"/>
+
+    <script>
+        let flightIdToDelete = null;
+
+        function setDeleteFlightId(id) {
+            flightIdToDelete = id;
+        }
+
+        document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+            if (flightIdToDelete) {
+                window.location.href = '${pageContext.request.contextPath}/manage-flight?id=' + flightIdToDelete + '&action=delete';
+            }
+        });
+    </script>
 </body>
 </html>

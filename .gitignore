@@ -4,3 +4,6 @@ airline-system/bin
 airline-system/target
 airline-system/.classpath
 airline-system/.project
+.idea
+airline-system/.smarttomcat/*
+airline-system/src/main/java/com/tech/util/ConnectionUtil.java
