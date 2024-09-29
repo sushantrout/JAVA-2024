@@ -534,89 +534,103 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  padding: 40px 0;
+  text-align: center; /* Centered text for better layout */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.footer:hover {
+  background-color: color-mix(in srgb, var(--background-color), transparent 10%); /* Slight hover effect */
 }
 
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  padding: 50px 0;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--background-color), transparent 90%));
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s; /* Added transform for lift effect */
+}
+
+.footer .footer-newsletter:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .footer .footer-newsletter h4 {
-  font-size: 24px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for emphasis */
 }
 
 .footer .footer-newsletter .newsletter-form {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding: 6px 8px;
-  position: relative;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  padding: 15px 12px; /* Increased padding for comfort */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for form */
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  transition: 0.3s;
-  border-radius: 4px;
+  align-items: center; /* Align items vertically */
+  transition: box-shadow 0.3s;
+  border-radius: 8px; /* Rounded corners */
 }
 
 .footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Shadow on focus */
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email] {
-  border: 0;
-  padding: 4px;
+  border: none;
+  padding: 12px; /* Increased padding for input */
   width: 100%;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: transparent;
   color: var(--default-color);
-}
-
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-  outline: none;
+  font-size: 14px;
+  border-radius: 4px; /* Rounded corners for input */
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit] {
-  border: 0;
+  border: none;
   font-size: 16px;
-  padding: 0 20px;
-  margin: -7px -8px -7px 0;
+  padding: 12px 24px; /* Increased padding */
+  margin-left: 10px;
   background: var(--accent-color);
   color: var(--contrast-color);
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 4px;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color), transparent 30%);
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
-.footer .footer-top {
-  padding-top: 50px;
+.footer .social-links {
+  margin: 20px 0; /* Margin around social links */
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  font-size: 24px; /* Larger font size for icons */
   color: var(--accent-color);
-  margin-right: 10px;
-  transition: 0.3s;
+  margin: 0 10px; /* Spacing between icons */
+  transition: background 0.3s, transform 0.2s;
 }
 
 .footer .social-links a:hover {
   color: var(--contrast-color);
   background-color: var(--accent-color);
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -632,27 +646,16 @@ h6 {
   margin: 0;
 }
 
-.footer .footer-links ul i {
-  margin-right: 3px;
-  font-size: 12px;
-  line-height: 0;
-  color: var(--accent-color);
-}
-
 .footer .footer-links ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
 }
 
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
 .footer .footer-links ul a {
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  line-height: 1;
+  transition: color 0.3s;
 }
 
 .footer .footer-links ul a:hover {
@@ -671,9 +674,9 @@ h6 {
 }
 
 .footer .copyright {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  text-align: center;
 }
 
 .footer .copyright p {
@@ -683,6 +686,7 @@ h6 {
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

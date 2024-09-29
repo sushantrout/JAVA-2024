@@ -5,16 +5,15 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.jsp" class="d-flex align-items-center">
-                        <span class="sitename">SkyJet</span>
+                        <span class="sitename">Flexstart</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p>bhubaneswar</p>
+                        <p>centurion university</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>8093580964</span></p>
+                        <p><strong>Email:</strong> <span>cutm@example.com</span></p>
                     </div>
                 </div>
-
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
@@ -50,7 +49,7 @@
         </div>
 
         <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">SkyJet</strong>
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Flexstart</strong>
                 <span>All Rights Reserved</span></p>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
