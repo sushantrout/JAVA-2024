@@ -74,7 +74,7 @@ public class ManageUserServlet extends HttpServlet {
         String gender = req.getParameter("gender");
         String passportId = req.getParameter("passportId");
         String address = req.getParameter("address");
-        String dob = req.getParameter("dob");
+        String dateOfBirth = req.getParameter("dateOfBirth");
         String contact = req.getParameter("contact");
 
         // Create a new User object
@@ -84,7 +84,7 @@ public class ManageUserServlet extends HttpServlet {
         user.setGender(gender);
         user.setPassportId(passportId);
         user.setAddress(address);
-        user.setDateOfBirth(dob);
+        user.setDateOfBirth(dateOfBirth);
         user.setContact(contact);
 
         // Add user to the database
@@ -102,7 +102,7 @@ public class ManageUserServlet extends HttpServlet {
         String gender = req.getParameter("gender");
         String passportId = req.getParameter("passportId");
         String address = req.getParameter("address");
-        String dob = req.getParameter("dob");
+        String dateOfBirth = req.getParameter("dateOfBirth");
         String contact = req.getParameter("contact");
 
         // Update the user object
@@ -113,7 +113,7 @@ public class ManageUserServlet extends HttpServlet {
         user.setGender(gender);
         user.setPassportId(passportId);
         user.setAddress(address);
-        user.setDateOfBirth(dob);
+        user.setDateOfBirth(dateOfBirth);
         user.setContact(contact);
 
         // Update user in the database
@@ -121,6 +121,7 @@ public class ManageUserServlet extends HttpServlet {
 
         // Refresh the user list
         viewUsers(req, resp);
+        resp.sendRedirect(req.getContextPath() + "/manage-user");
     }
 
     private void deleteUser(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -131,6 +132,7 @@ public class ManageUserServlet extends HttpServlet {
 
         // Refresh the user list
         viewUsers(req, resp);
+        resp.sendRedirect(req.getContextPath() + "/manage-user");
     }
 
     private void viewUsers(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
