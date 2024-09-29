@@ -45,7 +45,7 @@
                     if(session.getAttribute("username") != null) {
                 %>
                     <li><a href="${pageContext.request.contextPath}/manage-flight">Flight</a></li>
-                    <li><a href="${pageContext.request.contextPath}/manage-user.jsp">Manage User</a></li>
+                    <li><a href="${pageContext.request.contextPath}/manage-user">Manage User</a></li>
                     <li><a href="${pageContext.request.contextPath}/logout">
                                         <i class="fa fa-sign-out" title="Logout"></i></a></li>
                 <%} %>

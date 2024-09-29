@@ -11,12 +11,11 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-                    <p data-aos="fade-up" data-aos-delay="100">We are team of talented designers making websites with
-                        Bootstrap</p>
+                    <h1 data-aos="fade-up">To most people, the sky is limit to those who love aviation, the sky is home</h1>
+                    <p data-aos="fade-up" data-aos-delay="100">Aviation is not just about the destination; it's about the journey and the experiences along the way</p>
                     <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
                         <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
-                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                        <a href="https://youtu.be/al51WZcN2_U?si=KWdH4K5c1sn3GyIP"
                            class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
@@ -61,7 +60,7 @@
                         </form>
                     </div>
                     <%}else{%>
-                    <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+                    <img src="assets/img/airlineimg.jpg" class="img-fluid" alt="">
                     <%}%>
                 </div>
             </div>
