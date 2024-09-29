@@ -309,7 +309,7 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Clients</h2>
-            <p>We work with best clients<br></p>
+            <p>We work with best <br></p>
         </div><!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
